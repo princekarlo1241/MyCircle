@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: partial_production
-  username: princekarlo1241
-  password: <%= ENV['princekarlo124196060033'] %>
+  username: partial_production
+  password: <%= ENV['partial_production'] %>
