@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light navbar-mycircle">
+  <div class="container-fluid">
+    <a class="navbar-brand nav-logo m-0" href="/">MyCircle 
+      <p class="m-0" style="letter-spacing: -9px; display: inline-block; font-size: 25px;">OOO</p>
+    </a>
+    <div class="navbar-links">
+      <div class="navbar-links-desktop">
+        <% if !current_user %>
+          <%= link_to "Sign In", new_user_session_path, class: 'btn btn-light btn-mycircle m-1' %>
+          <%= link_to  "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-mycircle m-1' %>
+        <% else %>
+          <%= link_to "Home", root_path, class: 'btn btn-light btn-mycircle -hoverprimary m-1' %>
+          <%= link_to root_path, class: 'btn btn-light btn-mycircle -hoverprimary m-1' do %>
+            Message<span class="badge bg-danger text-light">4</span>
+          <% end %>
+          <%= link_to root_path, class: 'btn btn-light btn-mycircle -hoverprimary m-1' do %>
+            Notifications<span class="badge bg-danger text-light">+99</span>
+          <% end %>
+          <%= link_to "Profile", profile_index_path, class: 'btn btn-light btn-mycircle -hoverprimary m-1' %>
+      </div>
+        <div class="navbar-links-mobile">
+        <%= link_to root_path, class: 'btn btn-light btn-mycircle m-1' do %>
+          <span class="navbar-toggler-icon"></span>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,18 @@
+<div class="post-field p-4">
+  <button class="btn btn-primary post-btn">Post</button>
+  <textarea class="text-field" placeholder="Write something..."></textarea>
+</div>
+<h1>Ahh so you are <%= current_user.firstname %></h1>
+<div>Welcome <%= current_user.firstname %> <%= current_user.lastname %></div>
+  <%= link_to "Profile", root_path, class: "btn btn-primary btn-mycircle" %>
+  <%= link_to "Sign Out", destroy_user_session_path, 
+    method: :delete, class: "btn btn-light btn-mycircle -primary" %>
+
+<h1>Existing people: </h1>
+  <% @users.each do |user| %>
+    <%= link_to user do%>
+      <%= user.firstname %>
+      <%= user.lastname %>
+    <% end %>
+    <br />
+  <% end %>

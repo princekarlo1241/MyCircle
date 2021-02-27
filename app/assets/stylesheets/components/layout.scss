@@ -1,0 +1,71 @@
+body {
+  overflow: hidden;
+}
+.navbar-mycircle {
+  border-bottom: 1px solid #ccc;
+  .nav-logo {
+    font-size: 25px
+  }
+}
+.navbar-links {
+  .btn-mycircle {
+    border-radius: 200px;
+    &.-hoverprimary {
+      color: #000;
+      &:hover {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+    }
+    &.-hoverdanger {
+      color: #000;
+      &:hover {
+        color: #fff;
+        background-color: #dc3545;
+      }
+    }
+  }
+}
+.yields {
+  height: 100%;
+  overflow-x: scroll;
+  align-self: stretch;
+}
+.sidebar-mycircle {
+  &.-left {
+    width: 320px;
+    height: 100vh;
+    align-self: flex-start;
+  }
+
+  &.-right {
+    width: 320px;
+    height: 100vh;
+    align-self: flex-end;
+  }
+}
+
+// Hide sidebar if in mobile
+@media (max-width: 780px) {
+  .sidebar-mycircle {
+    display: none;
+  }   
+
+  .navbar-links-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 779px) {
+  .navbar-links-mobile {
+    display: none;
+  }
+}
+
+.vertical-divider {
+  display: inline-block;
+  border-left: 1px solid #ccc;
+  margin: 0;
+  height: 100vh;
+}

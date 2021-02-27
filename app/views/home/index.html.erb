@@ -1,0 +1,7 @@
+<% if !current_user %>
+<div class="text-center h1 m-4">Welcome!</div>
+<div class="h4 bg-primary text-light text-center"
+      style="padding: 50px; border-radius: 10px;">A place for you and for everyone</div>
+<% else %>
+  <%= render "home"%>
+<% end %>
